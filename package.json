@@ -1,5 +1,5 @@
 {
-  "name": "Control Producción V2",
+  "name": "ControlProduccionV2",
   "version": "0.0.1",
   "description": "Control de producción pigmea",
   "main": "index.js",
