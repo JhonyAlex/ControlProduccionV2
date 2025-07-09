@@ -11,6 +11,10 @@ Este repositorio contiene un ejemplo sencillo de servidor Express y un proyecto 
    ```bash
    npm install
    ```
+   Luego copia el archivo de ejemplo de variables de entorno:
+   ```bash
+   cp .env.example .env
+   ```
 2. Instala las dependencias del frontend:
    ```bash
    cd frontend && npm install
