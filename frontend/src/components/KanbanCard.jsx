@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDraggable } from '@dnd-kit/core'
+import { CSS } from '@dnd-kit/utilities'
 import { PedidoProduccion } from '../types/PedidoProduccion'
 
 /**
@@ -8,8 +10,22 @@ import { PedidoProduccion } from '../types/PedidoProduccion'
  * @returns {JSX.Element} Tarjeta con información del pedido.
  */
 function KanbanCard({ pedido }) {
+  const { attributes, listeners, setNodeRef, transform, isDragging } =
+    useDraggable({ id: pedido.id })
+
+  const style = {
+    transform: CSS.Translate.toString(transform),
+    opacity: isDragging ? 0.5 : 1,
+  }
+
   return (
-    <div className="bg-white rounded-lg shadow p-2 border">
+    <div
+      ref={setNodeRef}
+      {...listeners}
+      {...attributes}
+      style={style}
+      className="bg-white rounded-lg shadow p-2 border"
+    >
       <div className="font-semibold">{pedido.numeroPedido}</div>
       <div className="text-xs text-gray-600">{pedido.cliente}</div>
       <div className="text-xs">
