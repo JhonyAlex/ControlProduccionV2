@@ -1,0 +1,38 @@
+import { PedidoProduccion } from '../types/PedidoProduccion'
+
+export const pedidosMock: PedidoProduccion[] = [
+  {
+    id: '1',
+    numeroPedido: 'ACME-1001',
+    cliente: 'ACME Corp.',
+    maquinaImpresion: 'GIAVE',
+    desarrTexto: 'Bolsa de 30cm',
+    desarrNumero: 30,
+    metros: 1200,
+    tipoImpresion: 'Superficie',
+    capa: 'PET',
+    camisa: 'Roja',
+    fecha: '2024-07-09T08:30',
+    observaciones: 'Urgente',
+    secuenciaPedido: 1001,
+    etapaActual: 'Impresión GIAVE',
+    etapasSecuencia: ['Impresión GIAVE', 'Laminado', 'Rebobinado', 'Completado'],
+  },
+  {
+    id: '2',
+    numeroPedido: 'FOO-2002',
+    cliente: 'Foo S.L.',
+    maquinaImpresion: 'UTECO',
+    desarrTexto: 'Envase 50ml',
+    desarrNumero: 50,
+    metros: 5000,
+    tipoImpresion: 'Transparencia',
+    capa: 'PP',
+    camisa: 'Azul',
+    fecha: '2024-07-10T11:00',
+    observaciones: '',
+    secuenciaPedido: 2002,
+    etapaActual: 'Laminado',
+    etapasSecuencia: ['Impresión UTECO', 'Laminado', 'Perforado', 'Completado'],
+  },
+]
