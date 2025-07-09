@@ -15,7 +15,12 @@ app.get('/', (req, res) => {
   res.send('¡Hola, Mundo desde Heroku!');
 });
 
-// 5. Iniciar el servidor y ponerlo a escuchar en el puerto definido
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
-});
+// 5. Exportar la aplicación para facilitar las pruebas
+module.exports = app;
+
+// 6. Si el archivo se ejecuta directamente, iniciar el servidor
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto ${PORT}`);
+  });
+}

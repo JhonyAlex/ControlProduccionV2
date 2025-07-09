@@ -29,4 +29,14 @@ Este repositorio contiene un ejemplo sencillo de servidor Express y un proyecto 
    npm start
    ```
 
+## Pruebas
+
+Para ejecutar las pruebas unitarias:
+
+```bash
+npm test
+```
+
+Este comando ejecuta Jest y verifica que la ruta principal responda con el texto de bienvenida.
+
 Consulta `frontend/README.md` para más detalles sobre la aplicación React.
