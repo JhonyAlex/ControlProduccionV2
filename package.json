@@ -1,0 +1,15 @@
+{
+  "name": "Control Producción V2",
+  "version": "0.0.1",
+  "description": "Control de producción pigmea",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
