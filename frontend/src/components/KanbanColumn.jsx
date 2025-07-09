@@ -1,6 +1,5 @@
 import React from 'react'
 import KanbanCard from './KanbanCard'
-import { useDroppable } from '@dnd-kit/core'
 import { PedidoProduccion } from '../types/PedidoProduccion'
 
 /**
@@ -10,15 +9,9 @@ import { PedidoProduccion } from '../types/PedidoProduccion'
  * @returns {JSX.Element} Columna con las tarjetas correspondientes.
  */
 function KanbanColumn({ etapa, pedidos }) {
-  const { setNodeRef, isOver } = useDroppable({ id: etapa })
-
+  // Esta columna se gestiona como contexto ordenable desde KanbanBoard
   return (
-    <div
-      ref={setNodeRef}
-      className={`bg-gray-100 rounded-xl p-3 min-w-[260px] shadow-md flex-1 ${
-        isOver ? 'bg-blue-100' : ''
-      }`}
-    >
+    <div className="bg-gray-100 rounded-xl p-3 min-w-[260px] shadow-md flex-1">
       <h2 className="text-lg font-bold mb-2">{etapa}</h2>
       <div className="flex flex-col gap-2">
         {pedidos.map((pedido) => (
