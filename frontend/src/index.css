@@ -160,3 +160,28 @@
 body {
   letter-spacing: var(--tracking-normal);
 }
+
+/* Estilos personalizados para el Kanban */
+.kanban-column {
+  background-color: var(--color-card);
+  color: var(--color-card-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem;
+  min-width: 16rem;
+  box-shadow: var(--shadow-md);
+}
+
+.kanban-column.is-over {
+  background-color: var(--color-secondary);
+}
+
+.kanban-card {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+

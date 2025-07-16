@@ -15,9 +15,7 @@ function KanbanColumn({ etapa, pedidos }) {
   return (
     <div
       ref={setNodeRef}
-      className={`bg-gray-100 rounded-xl p-3 min-w-[260px] shadow-md flex-1 ${
-        isOver ? 'bg-blue-100' : ''
-      }`}
+      className={`kanban-column flex-1 ${isOver ? 'is-over' : ''}`}
     >
       <h2 className="text-lg font-bold mb-2">{etapa}</h2>
       <div className="flex flex-col gap-2">
